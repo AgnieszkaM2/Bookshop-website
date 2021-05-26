@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="Stylesheet" type="text/css" href="style.css"/>
+  <style>
+  .menu {top: 20px;
+        left: 20px;}
+  input[type=submit] {
+    background-color: #048EB8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+   }
+    input[type=submit]:hover {
+    opacity: 0.8;
+  }
+  hr {
+    border: 1px solid rgba(45, 204, 231, 0.4);
+    box-shadow: 0 0 10px rgba(180, 232, 255, 0.3), 0 0 20px rgba(180, 232, 255, 0.3); 
+  }
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+ <title>Losuj</title>
+</head>
+<body>
+ <div class="menu">
+  <div class="label">Menu</div>
+  <div class="spacer"></div>
+  <div class="item"><span><a href="BookStore.html">Strona główna</a></span></div>
+  <div class="item"><span><a href="Bestsellery.html">Bestsellery</a></span></div>
+  <div class="item"><span><a href="Książki.html">Książki</a></span></div>
+  <div class="item"><span><a href="Logowanie.html">Logowanie</a></span></div>
+ </div>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <form action='' method="post">
+ <div align="center">
+  <h2>Wylosuj kolejną książkę do przeczytania</h2>
+  <p>Wybierz gatunek:</p>
+  <br/>
+  <input type="radio" name="Rodzaj" value="Fantastyka, Sci-fi">Fantastyka, Sci-fi<br/>
+  <input type="radio" name="Rodzaj" value="Kryminał, Thriller">Kryminał, Thriller<br/>
+  <input type="radio" name="Rodzaj" value="Horror">Horror<br/>
+  <input type="radio" name="Rodzaj" value="Młodzieżowa">Młodzieżowa<br/>
+  <input type="radio" name="Rodzaj" value="Romans">Romans<br/>
+  <input type="radio" name="Rodzaj" value="Obyczajowa">Obyczajowa<br/>
+  <input type="radio" name="Rodzaj" value="Przygodowa">Przygodowa<br/>
+  <input type="radio" name="Rodzaj" value="Klasyka">Klasyka<br/>
+  <br/>
+  <br/>
+  <input type="submit" value="Losuj">  
+  </p>
+ </div>
+ </form>
+ <br/>
+ <h3 align="center"><b>Wynik:</b></h3>
+ <div id="random"></div>
+ <!-- Po dodaniu bazy danych, będzie wyświetlany losowy wiersz z tabeli książka, w zależności od wybranego gatunku-->
+ <!-- Przykładowy skrypt jQuery Ajax, wykorzystujący plik los.php, odpowiedzialny za załadowanie losowego wiersza -->
+ <!--
+ <script>
+  function getRand() {
+  $.ajax({
+  url: "los.php",
+  success: function(response) {
+  $("#random").html(response);
+  }
+  });
+  };
+ </script>
+ -->
+
+</body>
+</html>

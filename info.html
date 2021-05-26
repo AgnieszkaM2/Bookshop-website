@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <link rel="Stylesheet" type="text/css" href="style.css"/>
+ <style>
+input[type=submit], button {
+  background-color: #048EB8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+ }
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+hr {
+  border: 1px solid rgba(45, 204, 231, 0.4);
+  box-shadow: 0 0 10px rgba(180, 232, 255, 0.3), 0 0 20px rgba(180, 232, 255, 0.3); 
+  }
+  
+  input[type=text] {
+  width: 15%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #D4F6FA;
+  }
+  input[type=text]:focus {
+  opacity: 0.8;
+  outline: none;
+  }
+  input[type=email] {
+  width: 15%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #D4F6FA;
+  }
+  input[type=email]:focus {
+  opacity: 0.8;
+  outline: none;
+  }
+textarea {
+  box-shadow: rgba(180, 232, 255, 0.3);
+  border: 1px solid rgba(45, 204, 231, 0.4);
+  box-sizing: content-box;
+  background-color: #D4F6FA;
+  font-family:"Times New Roman", Times, serif;
+  font-size: 16px;
+  }
+  textarea:focus {
+  opacity: 0.8;
+  outline: none;
+  }
+ </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+ <title>Informacje</title>
+</head>
+<body>
+ <br/>
+ <br/>
+ <h2 align="center">Uzupełnij informacje do swojego profilu</h2>
+ <br/>
+ <hr>
+ <br/>
+ <p>
+<form action="uploadedit.php" method="post" enctype="mutlipart/form-data">
+ <div align="center" id="formularz">
+ <label for="username">Nazwa użytkownika:</label><br/><br/>
+ <input type="text" id="username" name="username" required>
+ <br/> 
+ <hr style="width:70%">
+ <br/>
+ <label>Opis:</label><br><br/>
+ <textarea id="opis" name="opis" rows="8" cols="80">
+ </textarea>
+ <br/>
+ <br/>
+ <hr style="width:70%">
+ <br/>
+ <label for="email">Podaj swój email:</label><br/><br/>
+ <input type="email" id="email" name="email">
+ <br/>
+ <hr style="width:70%">
+ <br/>
+  <p>Ile książek czytasz średnio w ciągu miesiąca ?</p>
+  <br/>
+  <input type="radio" name="avg" value="1-5">1-5<br/>
+  <input type="radio" name="avg" value="5-10">5-10<br/>
+  <input type="radio" name="avg" value="10-20">10-20<br/>
+  <input type="radio" name="avg" value="powyżej 20">powyżej 20<br/>
+  <br/>
+  <hr style="width:70%">
+  <br/>
+  <label for="imgfile">Dodaj zdjęcie swojego profilu:</label><br/><br/>
+  <input type="file" id="imgfile" name="imgfile">
+  <br/>
+  <br/>
+  <hr>
+  <br/>
+  <button type='submit' name='zapisz'>Zapisz</button></form>
+ </div>
+</form>
+ 
+</body>
+</html>
